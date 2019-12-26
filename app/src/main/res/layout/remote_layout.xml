@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="5dp"
+        android:src="@mipmap/ic_launcher"/>
+
+    <LinearLayout
+        android:id="@+id/remote_music_name_ll"
+        android:layout_width="120dp"
+        android:layout_height="match_parent"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="12dp"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/remote_music_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:ellipsize="end"
+            android:gravity="bottom"
+            android:maxLines="1"
+            android:text="kakaMusic"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/remote_singer_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:ellipsize="end"
+            android:gravity="top"
+            android:maxLines="1"
+            android:text="yzbkaka"
+            android:textColor="@color/grey500"
+            android:textSize="11sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/remote_play_iv"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:clickable="true"
+        android:padding="6dp"
+        android:src="@drawable/play" />
+
+    <ImageView
+        android:id="@+id/remote_next_iv"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:clickable="true"
+        android:padding="10dp"
+        android:src="@drawable/selector_next_play_bar" />
+
+    <ImageView
+        android:id="@+id/remote_cancel"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="18dp"
+        android:clickable="true"
+        android:padding="10dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:src="@drawable/rcancel" />
+
+</LinearLayout>

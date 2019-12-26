@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yzbkaka.kakamusic">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission-sdk-23 android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="com.yzbkaka.kakamusic.util.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name="com.yzbkaka.kakamusic.activity.WelcomeActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.yzbkaka.kakamusic.activity.HomeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.yzbkaka.kakamusic.activity.ScanActivity"
+            android:label="@string/scan_music"
+            android:launchMode="standard"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.yzbkaka.kakamusic.activity.LocalMusicActivity"
+            android:label="@string/local_music"
+            android:launchMode="standard"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name="com.yzbkaka.kakamusic.service.MusicPlayerService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver
+            android:name="com.yzbkaka.kakamusic.receiver.PlayerManagerReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name="com.yzbkaka.kakamusic.activity.PlayActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/PlaylistActivityTheme" />
+
+        <activity
+            android:name="com.yzbkaka.kakamusic.activity.LastMyloveActivity"
+            android:label="@string/last_play"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.yzbkaka.kakamusic.activity.PlaylistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/PlaylistActivityTheme" />
+
+        <activity
+            android:name="com.yzbkaka.kakamusic.activity.ModelActivity"
+            android:launchMode="standard"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.yzbkaka.kakamusic.activity.ThemeActivity"
+            android:label="@string/theme_center"
+            android:launchMode="standard"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.yzbkaka.kakamusic.activity.AboutActivity"
+            android:label="@string/about"></activity>
+    </application>
+
+</manifest>
